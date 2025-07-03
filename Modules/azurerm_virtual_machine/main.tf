@@ -7,6 +7,7 @@ resource "azurerm_network_interface" "vm_nic" {
     name                          = "internal"
     subnet_id                     = data.azurerm_subnet.fnd_subnet.id
     private_ip_address_allocation = "Dynamic"
+    
   }
 }
 
@@ -15,8 +16,8 @@ resource "azurerm_linux_virtual_machine" "vm" {
   resource_group_name = var.rg_name
   location            = var.vm_location
   size                = "Standard_F2"
-  admin_username      = "vmadmin"
-  admin_password = "P@ssword@123"
+  admin_username      = 
+  admin_password = 
   disable_password_authentication = false
   network_interface_ids = [
     azurerm_network_interface.vm_nic.id
