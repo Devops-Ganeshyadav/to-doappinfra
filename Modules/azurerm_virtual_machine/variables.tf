@@ -7,4 +7,4 @@ variable "vm_publisher" { }
 variable "vm_offer" { }
 variable "vm_sku" { }
 variable "vm_osversion" { }
-variable "dfnd_subnet_name" { }
+variable "subnet_name" { }
